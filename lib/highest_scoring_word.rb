@@ -1,4 +1,6 @@
-x = "aa b"
+# frozen_string_literal: true
+
+x = 'aa b'
 
 score = []
 word_score = []
@@ -19,10 +21,10 @@ end
 
 max_score_index = score.index(score.max)
 
-puts "#{score}"
+puts score
 puts "Index du score max : #{score.each_with_index.max[1]}"
 puts x.split[max_score_index]
 x.split[max_score_index]
 
 values = ('a'..'z').each_with_index.to_h { |char, index| [char, index + 1] }
-max_word = x.split.max_by { |word| word.chars.sum { |char| values[char] } }
+x.split.max_by { |word| word.chars.sum { |char| values[char] } }
