@@ -1,44 +1,56 @@
 # frozen_string_literal: true
 
-# TODO: complete this class
-
-require 'pry'
-
-# Gives informations on pages and items passed as arg
+# Provides information on pages and items passed as arguments
 class PaginationHelper
-  # The constructor takes in an array of items and a integer indicating how many
-  # items fit within a single page
+  attr_reader :collection, :items_per_page
+
+  # Initializes an instance with a collection and items per page
   def initialize(collection, items_per_page)
     @collection = collection
     @items_per_page = items_per_page
   end
 
-  # returns the number of items within the entire collection
+  # Returns the number of items in the collection
   def item_count
-    @collection.size
+    collection.size
   end
 
-  # returns the number of pages
+  # Returns the total number of pages required
   def page_count
-    (item_count.to_f / @items_per_page).ceil.to_i
+    (item_count.to_f / items_per_page).ceil
   end
 
-  # returns the number of items on the current page. page_index is zero based.
-  # this method should return -1 for page_index values that are out of range
+  # Returns the number of items on a given page
   def page_item_count(page_index)
-    if page_index + 1 <= page_count && page_index >= 0
-      item_count % @items_per_page
+    return -1 if page_index >= page_count || page_index.negative?
+
+    if page_index == page_count - 1
+      item_count % items_per_page
     else
-      -1
+      items_per_page
     end
   end
 
-  # determines what page an item is on. Zero based indexes.
-  # this method should return -1 for item_index values that are out of range
-  def page_index(item_index); end
+  # Determines which page an item resides on
+  def page_index(item_index)
+    return -1 if item_index >= item_count || item_index.negative? || item_count.zero?
+
+    item_index / items_per_page
+  end
 end
 
-helper = PaginationHelper.new(%w[a b c d e f], 4)
-helper.page_item_count(0)
-helper.page_item_count(1)
-helper.page_item_count(2)
+
+helper = PaginationHelper.new(%w[0 1 2 3 4 5 6 7 8 9 10 11 12 13 14], 4)
+# page_index takes an item index and returns the page that it belongs on
+p helper.page_index(3) # == 0
+p helper.page_index(4) # == 1
+p helper.page_index(6) # == 1
+p helper.page_index(8) # == 2
+p helper.page_index(9) # == 2
+p helper.page_index(10) # == 2
+p helper.page_index(11) # == 3
+p helper.page_index(12) # == 3
+p helper.page_index(13) # == 3
+p helper.page_index(14) # == 3
+p helper.page_index(15) # == 3 page 4
+p helper.page_index(16) # == -1
