@@ -71,6 +71,11 @@
 # NOTES:
 #
 # WHAT:
+# Sort the letters
+# Divide the factorial of the number of characters in the input
+# By
+# The number of frequencies of each character
 #
 # HOW:
-#
+# Create asorted string
+# 
