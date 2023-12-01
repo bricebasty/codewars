@@ -74,15 +74,17 @@
 # Sort the letters
 # Divide the factorial of the number of characters in the input
 # By
-# The number of frequencies of each character
+# The factorials of the frequencies of each character all multiplied
 #
 # HOW:
 # Create asorted string
 #
-#
+# Take all characters in the string and map them to the factorial of their count
 #
 def factorial(n)
   (1..n).inject(&:*)
 end
 
-p factorial(10)
+def listPosition(word)
+  factorial(word.size) / word.map { |char| factorial(word.count(char)) }.inject(&:*)
+end
