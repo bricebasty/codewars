@@ -78,4 +78,16 @@
 #
 # HOW:
 # Create asorted string
-# 
+#
+#
+#
+def factorial(n)
+  factor = 1
+  until n == 1
+    factor *= n
+    n -= 1
+  end
+  n
+end
+
+p factorial(5)
