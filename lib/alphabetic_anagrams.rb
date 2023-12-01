@@ -89,4 +89,4 @@ def listPosition(word)
   factorial(word.size) / word.chars.map { |char| factorial(word.count(char)) }.inject(&:*)
 end
 
-listPosition("ABAB")
+p listPosition("ABAB")
