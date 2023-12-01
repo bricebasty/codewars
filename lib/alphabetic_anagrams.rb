@@ -82,12 +82,7 @@
 #
 #
 def factorial(n)
-  factorial = 1
-  until n == 1
-    factor *= n
-    n -= 1
-  end
-  factorial
+  (1..n).inject(&:*)
 end
 
 p factorial(5)
