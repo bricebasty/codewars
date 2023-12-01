@@ -87,7 +87,7 @@ def factorial(n)
     factor *= n
     n -= 1
   end
-  n
+  factor
 end
 
 p factorial(5)
