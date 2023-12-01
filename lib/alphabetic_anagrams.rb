@@ -1,5 +1,4 @@
-# Consider a "word" as any sequence of capital letters A-Z
-# (not limited to just "dictionary words").
+# Consider a "word" as any sequence of capital letters A-Z.
 # For any word with at least two different letters,
 # there are other words composed of the same letters
 # but in a different order (for instance, STATIONARILY/ANTIROYALIST, which happen
@@ -43,8 +42,18 @@
 # ABAB = 2
 # AAAB = 1
 # BAAA = 4
-# QUESTION = 24572
-# 
+#  =
+#
+# INPUT:
+# =>
+# =>
+# OUTPUT:
+#
+# INPUT: QUESTION
+# =>
+# =>
+# OUTPUT: 24572
+#
 # INPUT:BOOKKEEPER
 # =>
 # =>
