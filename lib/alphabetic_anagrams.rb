@@ -85,4 +85,4 @@ def factorial(n)
   (1..n).inject(&:*)
 end
 
-p factorial(5)
+p factorial(10)
