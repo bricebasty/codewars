@@ -82,12 +82,12 @@
 #
 #
 def factorial(n)
-  factor = 1
+  factorial = 1
   until n == 1
     factor *= n
     n -= 1
   end
-  factor
+  factorial
 end
 
 p factorial(5)
