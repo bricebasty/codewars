@@ -54,6 +54,7 @@ def square_digits(num):
   num_string = str(num)
   for digit in num_string:
     empty_string += digit ** 2
+  return int(empty_string)
 
 print(square_digits(9119)) # 811181
 
