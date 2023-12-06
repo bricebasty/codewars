@@ -13,7 +13,7 @@ end
 def remove_tests(var)
   var.each_line do |line|
     case line
-    when /Test\.assert_equals/
+    when /Test\.assert_equals/i
       puts_in_console(line, /Test\.assert_equals\(/, /\)\,\s?/)
     when /expect\(/
       puts_in_console(line, /expect\(/, /\)\)\.to\seq\(\s?/)
@@ -22,10 +22,8 @@ def remove_tests(var)
 end
 
 tests = <<~TEST
-Test.assert_equals(find_nb(4183059834009), 2022)
-Test.assert_equals(find_nb(24723578342962), -1)
-Test.assert_equals(find_nb(135440716410000), 4824)
-Test.assert_equals(find_nb(40539911473216), 3568)
+test.assert_equals(square_digits(9119), 811181)
+test.assert_equals(square_digits(0), 0)
 TEST
 
 remove_tests(tests)
