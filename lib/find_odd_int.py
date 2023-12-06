@@ -46,4 +46,7 @@
 # HOW:
 #
 def find_it(seq):
-  uniq_seq = {number for number in seq}
+    uniq_seq = {number for number in seq}
+    for number in uniq_seq:
+        if seq.count(number) % 2 != 0:
+          return number
