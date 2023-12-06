@@ -12,26 +12,26 @@
 # PROBLEM
 # ----------------
 #
-# INPUT:
-# OUTPUT:
+# INPUT: Array of integers
+# OUTPUT: Integer appearing an odd number of times in the array
 #
 # RULES:
-# -
+# - Always one integer appearing an odd number of times
 #
 # EXAMPLES
 # ----------------
 #
-# INPUT:
+# INPUT: [0,1,0,1,0]
 # =>
 # =>
-# OUTPUT:
+# OUTPUT: 0
 #
 # DATA STRUCTURES
 # ----------------
 #
-# INPUT:
-# =>
-# OUTPUT:
+# INPUT: Array
+# => Dictionary
+# OUTPUT: Integer
 #
 # ALGORITHM
 # ----------------
@@ -40,6 +40,10 @@
 # NOTES:
 #
 # WHAT:
-#
+# Create a uniq list
+# For each integer in the array
+#   If the count is odd return the integer
 # HOW:
 #
+def find_it(seq):
+  uniq_seq = {number for number in seq}
