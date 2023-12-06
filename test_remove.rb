@@ -14,7 +14,7 @@ def remove_tests(var)
   var.each_line do |line|
     case line
     when /Test\.assert_equals/i
-      puts_in_console(line, /Test\.assert_equals\(/, /\)\,\s?/)
+      puts_in_console(line, /Test\.assert_equals\(/, /\)\,\s?/i)
     when /expect\(/
       puts_in_console(line, /expect\(/, /\)\)\.to\seq\(\s?/)
     end
