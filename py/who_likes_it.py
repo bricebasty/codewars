@@ -40,7 +40,7 @@
 # HOW:
 #
 
-def likes(names):
+def likes(names) -> str:
     match len(names):
         case 0: return 'no one likes this'
         case 1: return f'{names[0]} likes this'
