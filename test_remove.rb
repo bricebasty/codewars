@@ -1,12 +1,12 @@
 def puts_in_console(line, test_str, arg_str)
   # Outputs method_return_value == expected_return_value
   puts  line.sub(test_str, "puts 'Test result is ' + (")
-            .sub(arg_str, ") == ")
-            .sub(/[\);]+$\n/, "") << ").to_s.upcase"
+            .sub(arg_str, ') == ')
+            .sub(/[);]+$\n/, '') << ').to_s.upcase'
   # Outputs method_return_value
-  puts  line.sub(test_str, "p ")
-            .sub(arg_str, ") # ")
-            .sub(/[\);]+$/, "")
+  puts  line.sub(test_str, 'p ')
+            .sub(arg_str, ') # ')
+            .sub(/[);]+$/, '')
   puts
 end
 
