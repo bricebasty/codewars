@@ -41,8 +41,15 @@
 #
 
 def likes(names):
-    # your code here
-    return []
+    match len(names):
+        case 0:
+            return []
+        case 1:
+            return f'{names[0]} likes this'
+        case 2:
+            return f'{names[0]} and {names[1]} like this'
+    return f'{names[0]}, {names[1]} and {len(names) - 2} others like this'
+
 
 print('Test result is ' + str(likes([]) == 'no one likes this'))
 print(likes([])) # 'no one likes this'
