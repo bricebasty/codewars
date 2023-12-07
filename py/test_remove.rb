@@ -1,11 +1,11 @@
 def puts_in_console(line, test_str, arg_str)
   # Outputs method_return_value == expected_return_value
-  puts  line.sub(test_str, "puts 'Test result is ' + (")
+  puts  line.sub(test_str, "print('Test result is ' + str(")
             .sub(arg_str, ') == ')
-            .sub(/[);]+$\n/, '') << ').to_s.upcase'
+            .sub(/[);]+$\n/, '') << '))'
   # Outputs method_return_value
-  puts  line.sub(test_str, 'p ')
-            .sub(arg_str, ') # ')
+  puts  line.sub(test_str, 'print(')
+            .sub(arg_str, ')) # ')
             .sub(/[);]+$/, '')
   puts
 end
@@ -13,17 +13,18 @@ end
 def remove_tests(var)
   var.each_line do |line|
     case line
-    when /Test\.assert_equals/i
-      puts_in_console(line, /Test\.assert_equals\(/, /\),\s?/i)
-    when /expect\(/
-      puts_in_console(line, /expect\(/, /\)\)\.to\seq\(\s?/)
+    when /test\.assert_equals/
+      puts_in_console(line, /test\.assert_equals\(/, /\),\s?/)
     end
   end
 end
 
 tests = <<~TEST
-test.assert_equals(square_digits(9119), 811181)
-test.assert_equals(square_digits(0), 0)
+test.assert_equals(likes([]), 'no one likes this')
+test.assert_equals(likes(['Peter']), 'Peter likes this')
+test.assert_equals(likes(['Jacob', 'Alex']), 'Jacob and Alex like this')
+test.assert_equals(likes(['Max', 'John', 'Mark']), 'Max, John and Mark like this')
+test.assert_equals(likes(['Alex', 'Jacob', 'Mark', 'Max']), 'Alex, Jacob and 2 others like this')
 TEST
 
 remove_tests(tests)
