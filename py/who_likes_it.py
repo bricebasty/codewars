@@ -48,6 +48,8 @@ def likes(names):
             return f'{names[0]} likes this'
         case 2:
             return f'{names[0]} and {names[1]} like this'
+        case 3:
+            return f'{names[0]}, {names[1]} and {names[2]} like this'
     return f'{names[0]}, {names[1]} and {len(names) - 2} others like this'
 
 
