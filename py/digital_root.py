@@ -9,3 +9,53 @@
 #    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
 # 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 # 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+# PROBLEM
+# ----------------
+#
+# INPUT: Integer
+# OUTPUT: Integer
+#
+# RULES:
+# -
+#
+# EXAMPLES
+# ----------------
+#
+# INPUT:
+# =>
+# =>
+# OUTPUT:
+#
+# DATA STRUCTURES
+# ----------------
+#
+# INPUT:
+# => Str
+# OUTPUT:
+#
+# ALGORITHM
+# ----------------
+#
+#
+# NOTES:
+#
+# WHAT:
+#
+# HOW:
+#
+
+def digital_root(n: int) -> int:
+    return sum([int(digit) for digit in str(n)])
+
+print('Test result is ' + str(digital_root(16) == 7))
+print(digital_root(16)) # 7
+
+print('Test result is ' + str(digital_root(942) == 6))
+print(digital_root(942)) # 6
+
+print('Test result is ' + str(digital_root(132189) == 6))
+print(digital_root(132189)) # 6
+
+print('Test result is ' + str(digital_root(493193) == 2))
+print(digital_root(493193)) # 2
