@@ -46,7 +46,7 @@
 #
 
 def digital_root(n: int) -> int:
-    return 1 + (n - 1) % 9 if n != 0 else 0
+    return n % 9 if n != 0 else 0
 
 print('Test result is ' + str(digital_root(16) == 7))
 print(digital_root(16)) # 7
