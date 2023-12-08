@@ -72,14 +72,14 @@ def is_valid_IP(strng):
           return False
     return True
 
-print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
-print(is_valid_IP('12.255.56.1')) #     True
+# print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
+# print(is_valid_IP('12.255.56.1')) #     True
 
-print('Test result is ' + str(is_valid_IP('') ==                False))
-print(is_valid_IP('')) #                False
+# print('Test result is ' + str(is_valid_IP('') ==                False))
+# print(is_valid_IP('')) #                False
 
-print('Test result is ' + str(is_valid_IP('abc.def.ghi.jkl') == False))
-print(is_valid_IP('abc.def.ghi.jkl')) # False
+# print('Test result is ' + str(is_valid_IP('abc.def.ghi.jkl') == False))
+# print(is_valid_IP('abc.def.ghi.jkl')) # False
 
 print('Test result is ' + str(is_valid_IP('123.456.789.0') ==   False))
 print(is_valid_IP('123.456.789.0')) #   False
