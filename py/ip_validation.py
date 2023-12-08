@@ -33,6 +33,11 @@
 # => 1
 # =>
 # OUTPUT: True
+
+# INPUT: 123.045.107.089
+# => 123 -> 1 -> ok
+# => 045 -> 0 -> false
+# OUTPUT: false
 #
 # DATA STRUCTURES
 # ----------------
@@ -48,12 +53,22 @@
 # NOTES:
 #
 # WHAT:
-#
+# Split the string by dots
+# Check for each element in the array
+#   If (it's first character is a 0 and the element length is 1) or (element contains letters) or (element to integer is not in between 0 and 255 inclusive)
+#     Return false
+# return true
 # HOW:
 #
 
+import re
+
 def is_valid_IP(strng):
-    strng.split(".")
+    numbers = strng.split(".")
+    for number in numbers:
+        if number[0] == "0" and len(number) > 1 or re.search("[A-Za-z]", number) != None or 0 > int(number) > 255:
+          return False
+    return True
 
 print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
 print(is_valid_IP('12.255.56.1')) #     True
