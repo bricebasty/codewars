@@ -65,7 +65,7 @@ import re
 
 def is_valid_IP(strng):
     if strng == "":
-       return False
+      return False
     numbers = strng.split(".")
     for number in numbers:
         if number[0] == "0" and len(number) > 1 or re.search("[A-Za-z]", number) != None or 0 > int(number) > 255:
