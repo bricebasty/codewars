@@ -30,7 +30,7 @@
 # ----------------
 #
 # INPUT: 1.2.3.4
-# => 1 
+# => 1
 # =>
 # OUTPUT: True
 #
@@ -53,7 +53,7 @@
 #
 
 def is_valid_IP(strng):
-    return None
+    strng.split(".")
 
 print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
 print(is_valid_IP('12.255.56.1')) #     True
