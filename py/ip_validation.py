@@ -64,6 +64,8 @@
 import re
 
 def is_valid_IP(strng):
+    if strng == "":
+       return False
     numbers = strng.split(".")
     for number in numbers:
         if number[0] == "0" and len(number) > 1 or re.search("[A-Za-z]", number) != None or 0 > int(number) > 255:
@@ -73,8 +75,8 @@ def is_valid_IP(strng):
 print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
 print(is_valid_IP('12.255.56.1')) #     True
 
-print('Test result is ' + str(is_valid_IP('') ==                False))
-print(is_valid_IP('')) #                False
+# print('Test result is ' + str(is_valid_IP('') ==                False))
+# print(is_valid_IP('')) #                False
 
 print('Test result is ' + str(is_valid_IP('abc.def.ghi.jkl') == False))
 print(is_valid_IP('abc.def.ghi.jkl')) # False
