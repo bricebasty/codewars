@@ -70,8 +70,7 @@ def is_valid_IP(string):
 
     for number in numbers:
         if (
-            number == ""
-            or not number.isdigit()
+            not number.isdigit()
             or number[0] == "0" and len(number) > 1
             or 0 < int(number) > 255
             ):
