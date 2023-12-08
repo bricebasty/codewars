@@ -64,13 +64,11 @@
 import re
 
 def is_valid_IP(string):
-    if string == "":
-        return False
+    if string == "": return False
 
     numbers = string.split(".")
 
-    if len(numbers) < 4:
-        return False
+    if len(numbers) < 4: return False
 
     for number in numbers:
         if (
@@ -80,6 +78,7 @@ def is_valid_IP(string):
             or number[0] == "-"
             ):
           return False
+
     return True
 
 print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
