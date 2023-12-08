@@ -14,3 +14,38 @@
 # Notes:
 # Leading zeros (e.g. 01.02.03.04) are considered invalid
 # Inputs are guaranteed to be a single string
+
+# PROBLEM
+# ----------------
+#
+# INPUT:
+# OUTPUT:
+#
+# RULES:
+# -
+#
+# EXAMPLES
+# ----------------
+#
+# INPUT:
+# =>
+# =>
+# OUTPUT:
+#
+# DATA STRUCTURES
+# ----------------
+#
+# INPUT:
+# =>
+# OUTPUT:
+#
+# ALGORITHM
+# ----------------
+#
+#
+# NOTES:
+#
+# WHAT:
+#
+# HOW:
+#
