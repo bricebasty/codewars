@@ -75,8 +75,8 @@ def is_valid_IP(strng):
 print('Test result is ' + str(is_valid_IP('12.255.56.1') ==     True))
 print(is_valid_IP('12.255.56.1')) #     True
 
-# print('Test result is ' + str(is_valid_IP('') ==                False))
-# print(is_valid_IP('')) #                False
+print('Test result is ' + str(is_valid_IP('') ==                False))
+print(is_valid_IP('')) #                False
 
 print('Test result is ' + str(is_valid_IP('abc.def.ghi.jkl') == False))
 print(is_valid_IP('abc.def.ghi.jkl')) # False
