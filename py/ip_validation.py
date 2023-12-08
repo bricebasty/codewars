@@ -64,7 +64,6 @@
 import re
 
 def is_valid_IP(string):
-    print(string)
     if string == "": return False
 
     numbers = string.split(".")
