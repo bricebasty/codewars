@@ -29,10 +29,10 @@
 # EXAMPLES
 # ----------------
 #
-# INPUT:
+# INPUT: 1.2.3.4
+# => 1 
 # =>
-# =>
-# OUTPUT:
+# OUTPUT: True
 #
 # DATA STRUCTURES
 # ----------------
