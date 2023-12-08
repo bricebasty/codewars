@@ -67,10 +67,16 @@ def is_valid_IP(strng):
     if strng == "":
       return False
     numbers = strng.split(".")
+    if len(numbers) < 4:
+      return False
     for number in numbers:
-        if number[0] == "0" and len(number) > 1 \
-        or re.search("[A-Za-z]", number != None) \
-        or 0 < int(number) > 255:
+        if (
+            number[0] == "0" and len(number) > 1
+            or re.search("[A-Za-z]", number != None)
+            or 0 < int(number) > 255
+            or number[0] == "-"
+
+            ):
           return False
     return True
 
