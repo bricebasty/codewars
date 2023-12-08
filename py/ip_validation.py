@@ -61,8 +61,6 @@
 # HOW:
 #
 
-import re
-
 def is_valid_IP(string):
     if string == "": return False
 
