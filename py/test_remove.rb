@@ -20,10 +20,18 @@ def remove_tests(var)
 end
 
 tests = <<~TEST
-test.assert_equals(digital_root(16), 7)
-test.assert_equals(digital_root(942), 6)
-test.assert_equals(digital_root(132189), 6)
-test.assert_equals(digital_root(493193), 2)
+test.assert_equals(is_valid_IP('12.255.56.1'),     True)
+test.assert_equals(is_valid_IP(''),                False)
+test.assert_equals(is_valid_IP('abc.def.ghi.jkl'), False)
+test.assert_equals(is_valid_IP('123.456.789.0'),   False)
+test.assert_equals(is_valid_IP('12.34.56'),        False)
+test.assert_equals(is_valid_IP('12.34.56 .1'),     False)
+test.assert_equals(is_valid_IP('12.34.56.-1'),     False)
+test.assert_equals(is_valid_IP('123.045.067.089'), False)
+test.assert_equals(is_valid_IP('127.1.1.0'),        True)
+test.assert_equals(is_valid_IP('0.0.0.0'),          True)
+test.assert_equals(is_valid_IP('0.34.82.53'),       True)
+test.assert_equals(is_valid_IP('192.168.1.300'),   False)
 TEST
 
 remove_tests(tests)
