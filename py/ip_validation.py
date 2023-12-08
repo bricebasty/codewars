@@ -65,10 +65,10 @@ import re
 
 def is_valid_IP(strng):
     if strng == "":
-      return False
+        return False
     numbers = strng.split(".")
     if len(numbers) < 4:
-      return False
+        return False
     for number in numbers:
         if (
             number[0] == "0" and len(number) > 1
