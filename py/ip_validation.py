@@ -71,7 +71,7 @@ def is_valid_IP(string):
             not number.isdigit()
             or number[0] == "0" and len(number) > 1
             or 0 < int(number) > 255
-            ):
+          ):
             return False
 
     return True
