@@ -64,20 +64,21 @@
 import re
 
 def is_valid_IP(string):
+    print(string)
     if string == "": return False
 
     numbers = string.split(".")
 
-    if len(numbers) < 4: return False
+    if len(numbers) != 4: return False
 
     for number in numbers:
         if (
-            re.search("[^0-9]", number)
+            number == ""
+            or re.search("[^0-9]", number)
             or number[0] == "0" and len(number) > 1
             or 0 < int(number) > 255
-            or number[0] == "-"
             ):
-          return False
+            return False
 
     return True
 
