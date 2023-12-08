@@ -62,8 +62,6 @@
 #
 
 def is_valid_IP(string):
-    if string == "": return False
-
     numbers = string.split(".")
 
     if len(numbers) != 4: return False
