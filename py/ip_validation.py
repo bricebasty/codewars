@@ -103,7 +103,7 @@ print(is_valid_IP('12.34.56.-1')) #     False
 # print(is_valid_IP('0.0.0.0')) #          True
 
 # print('Test result is ' + str(is_valid_IP('0.34.82.53') ==       True))
-print(is_valid_IP('0.34.82.53')) #       True
+# print(is_valid_IP('0.34.82.53')) #       True
 
 print('Test result is ' + str(is_valid_IP('192.168.1.300') ==   False))
 print(is_valid_IP('192.168.1.300')) #   False
